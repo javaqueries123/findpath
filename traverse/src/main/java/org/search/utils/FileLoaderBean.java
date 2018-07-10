@@ -36,7 +36,7 @@ public class FileLoaderBean {
 	 private Node parentNode=null;
 	 
 	 @PostConstruct
-	 public void postConstruct() {
+	 private void postConstruct() {
 	    Path path = null;
 
 	    Stream<String> lines = null;
@@ -106,7 +106,7 @@ public class FileLoaderBean {
 		 }
 	 }
 	 
-	 public boolean  isOriginAndOrDestinationEmpty(Node origin, Node destination){
+	 private boolean  isOriginAndOrDestinationEmpty(Node origin, Node destination){
 		 if (origin ==null || destination==null){
 			 return true;
 		 }else {
@@ -162,11 +162,5 @@ public class FileLoaderBean {
 		 return result;
 	 }
 
-	public Node getParentNode() {
-		return parentNode;
-	}
-
-	public void setParentNode(Node parentNode) {
-		this.parentNode = parentNode;
-	}
+	
 }
